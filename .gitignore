@@ -6,4 +6,3 @@ node_modules
 # Build files
 /dist
 /.idea/
-package-lock.json
