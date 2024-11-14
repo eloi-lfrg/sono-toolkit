@@ -38,7 +38,10 @@ jobs:
         run: npm install
 
       - name: TSDoc Action
-        run: typedoc src/index.ts
+        uses: erikyo/tsdoc-action@v1
+        with:
+          source_dir: ./src/*
+          output_dir: ./docs
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
