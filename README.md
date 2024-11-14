@@ -6,6 +6,7 @@
 
 * [Installation](#Installation)
 * [Features](#Features)
+* [Documentation](#Documentation)
 * [Examples](#Examples)
 * [Tests](#Tests)
 * [Contributors](#Contributors)
@@ -30,6 +31,9 @@ npm install sono-toolkit
 * Focus on high performance
 * High test coverage
 * Executable for generating applications quickly
+
+## Documentation
+Available [here](https://eloi-lfrg.github.io/sono-toolkit/)
 
 ## Examples
 
