@@ -1,4 +1,4 @@
-name: Doc Actions
+name: Documentation
 
 on:
   push:
