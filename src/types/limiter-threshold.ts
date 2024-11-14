@@ -64,7 +64,7 @@ export interface LimiterThresholdParams {
      */
     ampPower: number;
     /**
-     * Amplifier gain in W dB
+     * Amplifier gain in dB
      */
     ampGain: number;
 }
