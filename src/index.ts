@@ -1,5 +1,7 @@
-export function add(a: number, b: number): number {
-    return a + b;
-}
+/*
+ * Copyright (c) 2024 Eloi Lafargue.
+ * MIT License
+ */
 
-console.log(add(3, 5)); //output: 8
+export { computeLimiterThreshold } from './functions/compute-limiter-threshold'
+export { LimiterThresholdParams, LimiterTypeEnum, ChargeTypeEnum } from './types/limiter-threshold'
