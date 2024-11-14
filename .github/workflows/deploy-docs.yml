@@ -2,8 +2,6 @@
 name: TSDoc Actions
 
 on:
-  release:
-  workflow_dispatch:
   push:
     branches:
       - main
