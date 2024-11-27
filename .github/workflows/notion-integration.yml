@@ -1,0 +1,29 @@
+name: Notion integration
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - bugfix/**
+      - hotfix/**
+  pull_request:
+    types: [opened, reopened, closed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Notion integration
+        uses: jlcaraballo/gh-notion@v1.0.3
+        env:
+          NOTION_STATUS: |
+            TODO=Not Started
+            PROGRESS=In Progress
+            DONE=Done
+            REVIEW=In review
+            MERGED=Staged
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
+          NOTION_DATABASE: ${{ secrets.NOTION_DATABASE }}
