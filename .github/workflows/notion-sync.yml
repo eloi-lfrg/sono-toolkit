@@ -1,0 +1,29 @@
+name: Notion Sync
+on:
+  push:
+    branches:
+      - main
+      - feature/**
+      - bugfix/**
+      - hotfix/**
+  pull_request:
+    types: [opened, reopened, closed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Notion Sync
+        uses: jlcaraballo/gh-notion@v1.0.3
+        env:
+          NOTION_STATUS: |
+            TODO=Not Started
+            PROGRESS=In Progress
+            DONE=Done
+            REVIEW=In Review
+            MERGED=Done
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NOTION_SECRET: ${{ secrets.NOTION_SECRET }}
+          NOTION_DATABASE: ${{ secrets.NOTION_DATABASE }}
