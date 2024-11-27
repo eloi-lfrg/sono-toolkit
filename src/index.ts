@@ -3,5 +3,6 @@
  * MIT License
  */
 
-export { computeLimiterThreshold } from './functions/compute-limiter-threshold'
-export { LimiterThresholdParams, LimiterTypeEnum, ChargeTypeEnum } from './types/limiter-threshold'
+export {LimiterThresholdParams, LimiterTypeEnum, ChargeTypeEnum} from './types/limiter-threshold';
+export {computeLimiterThreshold} from './functions/compute-limiter-threshold';
+export {computeCompressorAttack} from "./functions/compute-compressor-attack";
