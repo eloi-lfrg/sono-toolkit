@@ -59,13 +59,35 @@ const params: LimiterThresholdParams = {
 
 const limiter = computeLimiterThreshold(params);
 console.log(limiter)
-// Outputs 4.5 in decibels
+// Outputs 4.5 in dB
 ```
 
 Available limiter types are :
 * dBu
 * T.Racks DS2/4
 * Behringer DCX 2496
+
+#### Compressor attack calculator :
+```ts
+import {
+    computeCompressorAttack
+} from 'sono-toolkit'
+
+const attack = computeCompressorAttack(90);
+console.log(attack)
+// Outputs 12 in ms
+```
+
+#### Compressor release calculator :
+```ts
+import {
+    computeCompressorRelease
+} from 'sono-toolkit'
+
+const release = computeCompressorRelease(90);
+console.log(release)
+// Outputs 354 in ms
+```
 
 ## Tests
 
